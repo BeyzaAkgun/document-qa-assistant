@@ -5,9 +5,11 @@ export interface DocumentListItem {
   chunk_count: number;
   created_at: string;
 }
+
 export interface DocumentUploadResponse extends DocumentListItem {
   pages_without_text: number[];
 }
+
 export type AnswerLanguage = "tr" | "en";
 
 export interface AskRequest {
