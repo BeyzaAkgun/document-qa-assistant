@@ -72,8 +72,10 @@ The current implementation uses exact vector search without an approximate neare
 These instructions target Linux / GitHub Codespaces with Python 3.12
 and an x86-64 CPU environment.
 
-The pinned Python dependencies were captured from the working development
-environment. A fresh-environment installation has not yet been verified.
+The pinned Python dependencies were successfully installed in a fresh
+Python 3.12 virtual environment within the existing Linux Codespace.
+Dependency checks and application imports passed. A complete setup
+against a new, empty database has not yet been re-tested.
 
 ### Prerequisites
 
@@ -279,6 +281,8 @@ The following behaviors were observed with fictional procedure documents:
 - A travel reimbursement question cites PDF page 2 of the travel procedure.
 - Excluding the travel document prevents it from being used as a source.
 - The React interface supports upload, selection, questions, and source display.
+- Blank PDFs are rejected with an informative extraction error.
+- Image-only PDFs are rejected with a message explaining that OCR is unsupported.rm -r -- .venv-verify
 
 These are manual scenario checks, not a comprehensive evaluation benchmark.
 Frontend build and lint checks also passed in the development environment.
