@@ -3,7 +3,8 @@
 A document question-answering application that retrieves relevant PDF passages and uses an LLM to generate answers with document names, PDF page numbers, and supporting text.
 
 Built with FastAPI, PostgreSQL, pgvector, Sentence Transformers, Gemini API, React, and TypeScript.
-
+![DocuMind interface showing a document-grounded answer and a citation to PDF page 2]
+(docs/images/DocuMind.png)
 ## Features
 
 - Upload text-based PDFs and extract text with PDF page numbers.
@@ -220,6 +221,22 @@ configure that routing.
 
 Uploading a document does not automatically select it.
 Repeated uploads currently create separate document records.
+
+## Demo documents
+
+The PDFs in [`examples/`](examples/) contain fictional company procedures.
+They are provided for demonstration and manual evaluation.
+
+| Document | Question | Expected information |
+| --- | --- | --- |
+| Access procedure | Who approves access requests? | Department manager — PDF page 1 |
+| Access procedure | How long does an approved request take? | Two business days — PDF page 1 |
+| Travel procedure | Seyahat masraf iadesine kaç iş günü içinde başvurmalıyım? | Five business days after the trip ends — PDF page 2 |
+| Either procedure | What is the company's annual revenue? | Insufficient information |
+
+Upload the demo PDFs through the interface and select the relevant documents.
+Document IDs are assigned by your database and may differ from the examples
+shown elsewhere in this README.
 
 ## API endpoints
 
