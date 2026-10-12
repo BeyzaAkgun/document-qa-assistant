@@ -3,8 +3,9 @@
 A document question-answering application that retrieves relevant PDF passages and uses an LLM to generate answers with document names, PDF page numbers, and supporting text.
 
 Built with FastAPI, PostgreSQL, pgvector, Sentence Transformers, Gemini API, React, and TypeScript.
-![DocuMind interface showing a document-grounded answer and a citation to PDF page 2]
-(docs/images/DocuMind.png)
+
+![DocuMind interface showing a document-grounded answer and a citation to PDF page 2](docs/images/DocuMind.png)
+
 ## Features
 
 - Upload text-based PDFs and extract text with PDF page numbers.
